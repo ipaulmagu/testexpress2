@@ -1,7 +1,9 @@
-set msg=%1
-if %msg% EQU "" Set Msg="first Commit"
+rem echo off
+
+if %1% EQU "" Set Msg="first Commit"
+if %1% NEQ "" Set Msg=%1%
 git add .
 git commit -m %msg%
-echo %msg%
+echo Message: %msg%
 rem git remote add origin https://github.com/ipaulmagu/testexpress2.git
 rem git push -u origin master
